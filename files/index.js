@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 const { exec, execSync } = require('child_process');
 const port = process.env.SERVER_PORT || process.env.PORT || 3000;        
-const UUID = process.env.UUID || '9bb61a7d-8db3-4e6d-ba97-47cf81c15bfa'; //若需要改UUID，需要在config.json里改为一致
+const UUID = process.env.UUID || 'a0bf6ac9-da9b-49bc-942c-ae6845a8d835'; //若需要改UUID，需要在config.json里改为一致
 const NEZHA_SERVER = process.env.NEZHA_SERVER || 'www.ooh.pp.ua';     
 const NEZHA_PORT = process.env.NEZHA_PORT || '443';                     // 哪吒端口为{443,8443,2096,2087,2083,2053}其中之一开启tls
-const NEZHA_KEY = process.env.NEZHA_KEY || 'O0B0rQmPoXzdldoede';   // 没用哪吒，把这个参数空着
-const ARGO_DOMAIN = process.env.ARGO_DOMAIN || '';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至files目录
-const ARGO_AUTH = process.env.ARGO_AUTH || '';
+const NEZHA_KEY = process.env.NEZHA_KEY || '6HHqXzvOUvWOBKHEYU';   // 没用哪吒，把这个参数空着
+const ARGO_DOMAIN = process.env.ARGO_DOMAIN || 'eunf.hii.pp.ua';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至files目录
+const ARGO_AUTH = process.env.ARGO_AUTH || '{"AccountTag":"7bb322966e0fe839f81391ed76cae6c5","TunnelSecret":"bIIWIp/zkFun/6qm1Aq5y0yc6qP7FMSnPIjb7Df3WaI=","TunnelID":"d281d86d-7473-4186-a3fa-81cfd0a61931","Endpoint":""}';
 const CFIP = process.env.CFIP || 'time.is';
 const NAME = process.env.NAME || 'Choreo';
 
